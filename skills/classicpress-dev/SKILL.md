@@ -20,11 +20,16 @@ supports. Verify against the ClassicPress source in this project, then implement
 
 Before editing, determine:
 
-1. **Is this actually ClassicPress?** Read `wp-includes/version.php`: a
-   `$wp_version` like `2.x` is ClassicPress; `6.x` is WordPress. A
-   `wp-config.php` with the block-editor-disabled markup and a `readme.txt`
-   that mentions ClassicPress also signal a CP tree. If the tree is
-   ambiguous, say so and ask — never assume.
+1. **Is this actually ClassicPress?** Do not classify by the shape of
+   `$wp_version` alone: ClassicPress 2.x is a re-fork of WordPress 6.2.x
+   and reports `$wp_version` as the *base* WordPress version (e.g.
+   `6.2.6`), not as `2.x` (verified in CP 2.5.0 `wp-includes/version.php`).
+   Reliable checks, best first:
+   `function_exists( 'classicpress_version' )` — the detection method CP
+   core itself recommends — or the `$cp_version` global in
+   `wp-includes/version.php` (CP format: `2.x.y`, e.g. `2.5.0`). A
+   `readme.txt` that mentions ClassicPress also signals a CP tree.
+   Ambiguous? Say so and ask — never assume.
 2. **What kind of code?** plugin (file header `Plugin Name:`), classic theme
    (style.css header `Theme Name:`), child theme (`Template:` header), or a
    mixed codebase being ported from WordPress.
