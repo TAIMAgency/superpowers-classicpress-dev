@@ -85,7 +85,7 @@
 - Create: `README.md`
 
 **Interfaces:**
-- Consumes: final file树 from Tasks 1–3 (all referenced paths must exist).
+- Consumes: final file tree from Tasks 1–3 (all referenced paths must exist).
 
 - [ ] **Step 1:** README: what it is, why (AI agents default to Gutenberg-era patterns; ClassicPress breaks those), per-harness install (OpenCode V1/V2 config snippets; Claude Code `/plugin marketplace add <repo>` or direct repo plugin; Codex/Cursor: copy `skills/classicpress-dev` into their skills dir; generic agents: copy folder), the "verify your install" prompt ("Tell me about your classicpress-dev skill"), companion-stack recommendation, troubleshooting pointers, attribution & license.
 - [ ] **Step 2:** Grep-verify every repo path each README/install-command references exists; fix drift.
