@@ -1,0 +1,21 @@
+{
+  "name": "superpowers-classicpress-dev",
+  "owner": {
+    "name": "YOUR_GITHUB_USERNAME"
+  },
+  "metadata": {
+    "description": "ClassicPress development methodology as one agent skill",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "superpowers-classicpress-dev",
+      "source": {
+        "source": "./"
+      },
+      "description": "ClassicPress development methodology: triage, classic-first build rules, security gates, testing, performance, and ClassicPress-directory release",
+      "version": "0.1.0",
+      "strict": true
+    }
+  ]
+}

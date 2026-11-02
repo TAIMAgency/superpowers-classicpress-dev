@@ -1,0 +1,27 @@
+{
+  "name": "superpowers-classicpress-dev",
+  "version": "0.1.0",
+  "description": "ClassicPress development methodology as one agent skill: repo triage, classic-first build rules, security gates, testing, performance, and ClassicPress-directory release",
+  "type": "module",
+  "main": ".opencode/plugins/superpowers-classicpress-dev.js",
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "keywords": [
+    "classicpress",
+    "wordpress",
+    "agent-skills",
+    "skills",
+    "superpowers",
+    "plugin-development",
+    "theme-development"
+  ],
+  "author": {
+    "name": "YOUR_GITHUB_USERNAME"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/superpowers-classicpress-dev"
+  },
+  "license": "MIT"
+}

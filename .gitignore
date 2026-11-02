@@ -1,0 +1,8 @@
+# Scratch and environment
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# Superpowers plan-execution scratch (installed for you by the SDD tooling)
+.superpowers/
