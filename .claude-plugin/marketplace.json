@@ -10,12 +10,9 @@
   "plugins": [
     {
       "name": "superpowers-classicpress-dev",
-      "source": {
-        "source": "./"
-      },
+      "source": "./",
       "description": "ClassicPress development methodology: triage, classic-first build rules, security gates, testing, performance, and ClassicPress-directory release",
-      "version": "0.1.0",
-      "strict": true
+      "version": "0.1.0"
     }
   ]
 }

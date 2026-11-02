@@ -34,8 +34,9 @@ Before editing, determine:
    (style.css header `Theme Name:`), child theme (`Template:` header), or a
    mixed codebase being ported from WordPress.
 3. **Which CP version?** From the code (or ask). Parity differs between 2.x
-   minors: each re-base restored chunks of the WordPress 6.2+ API surface.
-   Verification in step 2 is always against *this* version.
+   minors: the 2.0 re-fork plus selective backports restored chunks of the
+   later WordPress API surface. Verification in step 2 is always against
+   *this* version.
 
 ## 2. Verify against the source — every time
 
@@ -46,8 +47,11 @@ certain this CP tree ships:
   function's `function foo()` or `do_action( 'hook_name'` must exist in
   *this* checkout.
 - No local tree? Pin the version: `git clone --depth 1 --branch <tag>
-  https://github.com/ClassicPress/ClassicPress` (or read the tagged tree on
-  github) and grep that, or check classicpress.net docs before claiming support.
+  https://github.com/ClassicPress/ClassicPress-release` (or read the tagged
+  tree on github) and grep that, or check classicpress.net docs before
+  claiming support. (ClassicPress-release has the tree at the repo root —
+  `wp-includes/`, `wp-admin/` — matching real installs; the development
+  repo nests it under `src/`.)
 - A plugin sold to run on CP must target the *lowest* CP version the user
   actually runs — verify the floor, not the ceiling.
 - Claim parity only on evidence: a confirmed grep hit or doc citation. "It
@@ -194,7 +198,7 @@ skill wins any conflict**.
 | APIs marked WordPress 6.3+/7.x | Verify against this CP tree first (§2); several never made the 6.2 re-base. |
 | `@wordpress/scripts` / block build pipelines | Skip unless you outfit script translations that genuinely need them. |
 | WP.org SVN / Plugin Check for directory publish | Wrong directory: use CP directory guidelines (§8). |
-| "Model note: run on haiku/sonnet/opus" | Ignore: Claude Code tier conventions. Run everything on the current model. |
+| "Model size/tier notes" in skill text | Ignore: harness-specific conventions. Run everything on the current model. |
 | Woo/builder/page-building skills (Elementor, Bricks, Divi…) | Out of scope for CP: do not adopt their patterns. |
 | Security/i18n/DB/performance/testing mechanics | Apply fully — PHP patterns are CP-identical after the §2 parity check. |
 | `wp i18n make-json` / `wp_set_script_translations` | Only when you actually enqueue script-translated assets; skip block-era JS translation flows. |

@@ -40,10 +40,12 @@ adopted packaging.
 
 ### OpenCode (V1 and V2)
 
-From a pushed copy of this repo:
+From a pushed copy of this repo — OpenCode V2's current config key:
 
 ```jsonc
 // ~/.config/opencode/opencode.json  (global)  or  .opencode/opencode.json (project)
+// OpenCode V2: key is "plugins" (the older singular "plugin" is deprecated
+// but still accepted by hosts that shipped it).
 {
   "plugins": [
     "superpowers-classicpress-dev@git+https://github.com/YOUR_GITHUB_USERNAME/superpowers-classicpress-dev.git"
@@ -51,8 +53,17 @@ From a pushed copy of this repo:
 }
 ```
 
-Local directory form (both hosts verify; V2 requires the path to be the
-directory containing `index.js`):
+The `name@git+https://...` specifier form is what OpenCode itself uses for
+git-hosted plugin packages (verified working in OpenCode V2; the Superpowers
+plugin installs exactly this way). Legacy OpenCode 1.x hosts may use the
+singular key with the same values:
+
+```jsonc
+{ "plugin": ["superpowers-classicpress-dev@git+https://github.com/YOUR_GITHUB_USERNAME/superpowers-classicpress-dev.git"] }
+```
+
+Local directory form (both hosts verify; the path must be the directory that
+contains `index.js` and `skills/`; `~` is not expanded):
 
 ```jsonc
 {
@@ -63,9 +74,8 @@ directory containing `index.js`):
 Or skip the plugin entirely and install the skill as a personal skill: copy
 `skills/classicpress-dev/` into `~/.config/opencode/skills/`.
 
-Optional control over generation-shape differences is not needed — the plugin
-detects V1 (`config.skills.paths` injection) and V2 (`ctx.skill.transform`)
-itself.
+Generation-shape differences are handled inside the plugin: it detects V1
+(`config.skills.paths` injection) and V2 (`ctx.skill.transform`) itself.
 
 ### Claude Code
 

@@ -5,4 +5,8 @@
 // npm/git package installs resolve via package.json `main`; this file serves
 // the directory form — an absolute path such as
 // `"plugins": ["/path/to/superpowers-classicpress-dev"]` (`~` is not expanded).
-export { default } from './.opencode/plugins/superpowers-classicpress-dev.js';
+//
+// Re-exports both surfaces: the default `{ id, setup }` (V2) and the named
+// `SuperpowersCPDevPlugin` `config` hook (V1) — so a V1 host resolving this
+// directory still registers the V1 surface.
+export { default, SuperpowersCPDevPlugin } from './.opencode/plugins/superpowers-classicpress-dev.js';

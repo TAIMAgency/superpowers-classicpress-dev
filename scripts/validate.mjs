@@ -46,7 +46,9 @@ if (marketplace) {
   if (plugins.length === 0) errors.push('.claude-plugin/marketplace.json: "plugins" is empty');
   for (const pl of plugins) {
     const src = pl.source?.source ?? pl.source;
-    if (typeof src === 'string' && src.startsWith('./')) assertExists(path.join(src, 'index.js'), 'marketplace.json plugin source');
+    if (typeof src === 'string' && src.startsWith('./')) {
+      assertExists(path.join(src, '.claude-plugin', 'plugin.json'), `marketplace.json plugin "${pl.name}" source`);
+    }
   }
 }
 
