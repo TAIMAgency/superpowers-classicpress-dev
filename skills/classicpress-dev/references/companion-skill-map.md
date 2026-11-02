@@ -27,6 +27,7 @@ Rules:
 | [wpultimatesecurity/WordPress-Security-Skills](https://github.com/wpultimatesecurity/WordPress-Security-Skills) | MIT | `secure-plugin-development`, `ajax-security`, `nonces-csrf-protection`, `capability-permission-checks`, `output-escaping`, `input-sanitization-validation`, `sql-injection-prevention`, `rest-api-security`, `http-api-ssrf-prevention`, `file-upload-security`, `filesystem-security`, `authentication-session-security`, `settings-options-security`, `secrets-credentials-management`, `cron-background-job-security`, `dependency-supply-chain-security`, `multisite-security`, `security-headers-csp`, `security-auditing-code-review`, `object-injection-deserialization`, `user-data-protection-privacy` | USE: these are the deep versions of the §5 table; when this pack is installed prefer its per-area skills over the table. SKIP inside this pack: `gutenberg-block-editor-security`, `woocommerce-security` (CP: no block editor; WooCommerce out of scope here). |
 | [amElnagdy/guard-skills](https://github.com/amElnagdy/guard-skills) | MIT | `wp-guard`, `clean-code-guard`, `docs-guard`, `test-guard` | USE: quality gates that catch agent failure modes. `wp-guard` reviews WP-API-touching code — CP-safe: the escaping/nonce/prepared-query checks apply verbatim; ignore any FSE/WP.org-specific lines it emits. Skip `woo-guard` for this scope. |
 | [elvismdev/claude-wordpress-skills](https://github.com/elvismdev/claude-wordpress-skills) | MIT | `wp-performance-review` | USE: performance review of PHP/plugin code — mechanics are CP-identical after §2. |
+| [anthropics/skills](https://github.com/anthropics/skills) `frontend-design` | Apache-2.0 | `frontend-design` | USE: distinctive-visual-design direction (typography, palette, composition, motion) — platform-agnostic; apply to classic theme `style.css`, template PHP, and plugin admin screens. FILTER its stack assumptions (React/Next examples, build pipelines) to classic PHP/CSS idioms. SKIP nothing — it carries no block-editor-era habits. (Verified 2026-11-02, @main.) |
 
 ## Choosing a minimum set for ClassicPress work
 
@@ -39,6 +40,9 @@ If you install only a few, the highest-value companions are:
 3. `mralaminahamed/wp-dev-skills` — testing/standards/release mechanics.
 4. `WordPress/agent-skills` for `wp-plugin-development` + `wp-rest-api`
    reference depth.
+5. `anthropics/skills` `frontend-design` (Apache-2.0) — the visual-design
+   voice for theme and plugin-admin work: one deliberate direction,
+   typography, palette, and motion, in classic PHP/CSS idioms.
 
 ## Explicit SKIP categories for ClassicPress (any pack)
 

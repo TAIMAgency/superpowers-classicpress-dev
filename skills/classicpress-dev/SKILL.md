@@ -201,6 +201,7 @@ skill wins any conflict**.
 | "Model size/tier notes" in skill text | Ignore: harness-specific conventions. Run everything on the current model. |
 | Woo/builder/page-building skills (Elementor, Bricks, Divi…) | Out of scope for CP: do not adopt their patterns. |
 | Security/i18n/DB/performance/testing mechanics | Apply fully — PHP patterns are CP-identical after the §2 parity check. |
+| "Distinctive visual design direction" (`frontend-design`) | Apply fully — in classic PHP/CSS idioms: `style.css` + `wp_enqueue_style` (font loading via core-safe enqueueing, not `<?php echo` link tags). It carries no block patterns; do not let it suggest blocks or React pipelines. |
 | `wp i18n make-json` / `wp_set_script_translations` | Only when you actually enqueue script-translated assets; skip block-era JS translation flows. |
 
 ## 10. Common mistakes
