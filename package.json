@@ -17,11 +17,11 @@
     "theme-development"
   ],
   "author": {
-    "name": "YOUR_GITHUB_USERNAME"
+    "name": "TAIMAgency"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_GITHUB_USERNAME/superpowers-classicpress-dev"
+    "url": "https://github.com/TAIMAgency/superpowers-classicpress-dev"
   },
   "license": "MIT"
 }

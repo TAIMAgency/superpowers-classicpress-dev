@@ -3,10 +3,10 @@
   "description": "ClassicPress development methodology for AI coding agents: one skill that stops agents emitting WordPress block-editor patterns in ClassicPress projects, and walks them from repo triage through security-gated build, testing, and ClassicPress-directory release.",
   "version": "0.1.0",
   "author": {
-    "name": "YOUR_GITHUB_USERNAME"
+    "name": "TAIMAgency"
   },
-  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/superpowers-classicpress-dev",
-  "repository": "https://github.com/YOUR_GITHUB_USERNAME/superpowers-classicpress-dev",
+  "homepage": "https://github.com/TAIMAgency/superpowers-classicpress-dev",
+  "repository": "https://github.com/TAIMAgency/superpowers-classicpress-dev",
   "license": "MIT",
   "keywords": [
     "classicpress",
