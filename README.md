@@ -129,6 +129,7 @@ ClassicPress fit flag (USE / FILTER / SKIP) in
 - `amElnagdy/guard-skills` (MIT) â€” review quality gates.
 - `mralaminahamed/wp-dev-skills` (MIT) â€” standards, testing, i18n, release mechanics (its WordPress.org release-dir advice gets overridden â€” see map).
 - `WordPress/agent-skills` (GPL-2.0-or-later) â€” plugin/REST/CLI reference depth; block-era skills inside are SKIP.
+- `anthropics/skills` `frontend-design` (Apache-2.0) — visual-design direction for theme and plugin-admin work, filtered to classic PHP/CSS idioms.
 
 Rule: when packs conflict, `classicpress-dev` wins â€” the skill ships a
 rules-of-engagement table (SKILL.md Â§9) that filters WP.org-flavored habits.
